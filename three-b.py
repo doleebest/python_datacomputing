@@ -16,7 +16,12 @@ plt.axis([0,70,100,0])
 im = plt.imread("ground.jpg")
 plt.imshow(im,extent=[0,70,0,100])
 
-for i in range(37,43) :
+for i in range(29,32) :
+    if R[i] == 'O' and R[i-1] != 'O' :
+        plt.plot(x1[i],y1[i],'co')
+    if R[i] == 'B' or R[i] =='X' :
+        plt.plot(x2[i], y2[i], 'ko')
+        
     if act[i]=='P' :
         plt.plot([x1[i],x2[i]],[y1[i],y2[i]],'silver')
     elif act[i] =='C' :

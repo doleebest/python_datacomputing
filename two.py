@@ -16,7 +16,7 @@ plt.axis([0,70,100,0])
 im = plt.imread("ground.jpg")
 plt.imshow(im,extent=[0,70,0,100])
 
-for i in range(37,43) :
+for i in range(len(x1)) :
     if act[i]=='P' :
         plt.plot([x1[i],x2[i]],[y1[i],y2[i]],'silver')
     elif act[i] =='C' :
@@ -28,4 +28,5 @@ for i in range(37,43) :
         
 plt.tight_layout()
 plt.show()
+
 
